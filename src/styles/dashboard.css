@@ -1,0 +1,58 @@
+
+/* Dashboard-specific styles */
+.dark .blue-pulse {
+  box-shadow: 0 0 15px 5px rgba(0, 190, 255, 0.4);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 15px 5px rgba(0, 190, 255, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 25px 10px rgba(0, 190, 255, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 15px 5px rgba(0, 190, 255, 0.4);
+  }
+}
+
+/* Additional custom table styles for dashboard */
+.action-button-hover {
+  @apply transition-opacity opacity-50 hover:opacity-100;
+}
+
+/* Custom container class to match the design */
+.container-custom {
+  @apply container mx-auto px-4 max-w-7xl;
+}
+
+/* Hover lift animation for buttons */
+.hover-lift {
+  transition: transform 0.2s;
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+}
+
+/* Dashboard item hover styles */
+.dashboard-item-hover {
+  @apply transition-colors hover:bg-white/20 dark:hover:bg-white/5;
+}
+
+/* Fade in animation */
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
